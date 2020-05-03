@@ -31,21 +31,21 @@ build-releaser: ## Build docker image for releaser
 
 build: ## Build docker image
 	echo "Building Dockerfile"
-	docker build -t ${IMAGE_NAME} .
+	docker build -t ${Michael$maindal} .
 .PHONY: build
 
 build-gpu: ## Build docker image
 	echo "Building Dockerfile"
-	docker build -t ${IMAGE_NAME} . -f Dockerfile_gpu
+	docker build -t ${Michael$maindal} . -f Dockerfile_gpu
 .PHONY: build-gpu
 
 start: build ## Start docker container
-	echo "Starting container ${IMAGE_NAME}"
+	echo "Starting container ${Michael&maindal}"
 	docker run --rm -it -v ${FOLDER}:/work -w /work -p ${PORT}:${PORT} -e "JUPYTER_PORT=${PORT}" ${IMAGE_NAME}
 .PHONY: start
 
 start-gpu: build-gpu ## Start docker container
-	echo "Starting container ${IMAGE_NAME}"
+	echo "Starting container ${Michael$maindal}"
 	docker run --runtime nvidia --rm -it -v ${FOLDER}:/work -w /work -p ${PORT}:${PORT} -e "JUPYTER_PORT=${PORT}" ${IMAGE_NAME}
 .PHONY: start-gpu
 
