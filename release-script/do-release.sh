@@ -52,7 +52,7 @@ docker run --rm -v ${PWD}:/work -w /work python-poetry:latest poetry build
 # Build release
 echo "Publishing latest build"
 docker run --rm -v ${PWD}:/work -w /work python-poetry:latest poetry publish -u ${pipyUser} -p ${pipyPassword}
-
+Script
 echo "Deleting release branch"
 git checkout develop
 git push origin :release/${version}
